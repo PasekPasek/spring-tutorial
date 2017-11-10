@@ -18,5 +18,5 @@ public class OrganizationService {
 		List<Organization> orgList = organizationDao.getAllOrganizations();
 		return orgList;
 	}
-
+	
 }
