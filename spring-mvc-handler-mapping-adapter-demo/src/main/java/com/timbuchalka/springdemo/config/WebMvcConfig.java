@@ -29,8 +29,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public RequestMappingHandlerMapping requestMappingHandlerMapping() {
 		RequestMappingHandlerMapping rmhm = new RequestMappingHandlerMapping();
-		rmhm.setUseSuffixPatternMatch(true);
-		rmhm.setUseTrailingSlashMatch(true);
+		rmhm.setUseSuffixPatternMatch(false);
+		rmhm.setUseTrailingSlashMatch(false);
 		return rmhm;
 	}
 
