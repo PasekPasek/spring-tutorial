@@ -20,7 +20,7 @@ public class RequestMappingAndParamDemoController {
 	
 	//test1: Testing @requestParam without explicit attributes
 	@RequestMapping(value="/test1")
-	public String requestMappingAndParamTest1(@RequestParam("@orgName") String orgName, Model model){
+	public String requestMappingAndParamTest1(@RequestParam("orgname") String orgName, Model model){
 		model.addAttribute("orgname", orgName);
 		model.addAttribute("testserial", "test1");
 		return "requestMappingAndParamResults";

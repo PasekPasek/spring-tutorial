@@ -27,6 +27,15 @@ h2{
 </style>
 </head>
 <body>
-
+	<div align="left">
+		<h2 align="center">Hello, welcome to the @Requestmapping & @RequestParam test Bed</h2>
+		<hr>
+		<form action="test1">
+			<h3>test 1: testing @RequestParam without explicit attributes</h3>
+			<label id="organiztion-name">Organization Name</label>
+			<input type="text" name="orgname" placeholder="Enter organization name" size="40">
+			<input type="submit" value="Submit">
+		</form>
+	</div>
 </body>
 </html>
