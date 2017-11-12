@@ -11,5 +11,10 @@ public class RequestMappingAndParamDemoController {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(RequestMappingAndParamDemoController.class);
 	
+	@RequestMapping(value="/home")
+	public String home(){
+		return "requestMappingAndParamHome";
+	}
+	
 	
 }
