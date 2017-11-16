@@ -43,8 +43,23 @@ h2{
 			<input type="text" name="orgname" placeholder="Enter organization name" size="40">
 			<input type="submit" value="Submit">
 		</form>
+		<br/><br/>
 		<form action="test3">
 			<h3>test 3: testing @RequestParam fallback feature</h3>
+			<input type="submit" value="Submit">
+		</form>
+		<br/><br/>
+		<form action="test4">
+			<h3>test 4: testing @RequestParam 'defaultValue' attribute</h3>
+			<label id="organiztion-name">Organization Name</label>
+			<input type="text" name="orgname" placeholder="Enter organization name" size="40">
+			<input type="submit" value="Submit">
+		</form>
+		<br/><br/>
+		<form action="test5">
+			<h3>test 5: testing @RequestParam without name or value attribute</h3>
+			<label id="organiztion-name">Organization Name</label>
+			<input type="text" name="orgname" placeholder="Enter organization name" size="40">
 			<input type="submit" value="Submit">
 		</form>
 	</div>
