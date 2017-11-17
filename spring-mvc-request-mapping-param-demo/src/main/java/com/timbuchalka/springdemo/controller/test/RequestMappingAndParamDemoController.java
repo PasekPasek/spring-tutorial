@@ -49,11 +49,44 @@ public class RequestMappingAndParamDemoController {
 		return "requestMappingAndParamResults";
 	}
 	
-	//test2: testing @RequestParam without name or value
+	//test5: testing @RequestParam without name or value
 	@RequestMapping(value="/test5", method= RequestMethod.GET)
-	public String requestMappingAndParamTest5(@RequestParam String orgname, Model model){
+	public String requestMappingAndParamTest5(@RequestParam String orgname, Model model) {
 		model.addAttribute("orgname", orgname);
 		model.addAttribute("testserial", "test5");
 		return "requestMappingAndParamResults";
+	}
+
+//	// test6, subtest 1: testing @RequestMapping
+//	@RequestMapping(value = "/test6")
+//	public String requestMappingAndParamTest6Subtest1(@RequestParam String orgname, Model model) {
+//		model.addAttribute("orgname", orgname);
+//		model.addAttribute("testserial", "test6-subtest1");
+//		return "requestMappingAndParamResults2";
+//	}
+	
+	// test6, subtest 1: testing removal of @RequestMapping ambiguity with the same base URI but with a different parameter
+	@RequestMapping(value = "/test6", params="orgname")
+	public String requestMappingAndParamTest6Subtest1(@RequestParam String orgname, Model model) {
+		model.addAttribute("orgname", orgname);
+		model.addAttribute("testserial", "test6-subtest1");
+		return "requestMappingAndParamResults2";
+	}
+
+	// // test6, subtest 2: testing @RequestMapping
+	// @RequestMapping(value = "/test6")
+	// public String requestMappingAndParamTest6Subtest2(@RequestParam String
+	// empcount, Model model) {
+	// model.addAttribute("orgname", empcount);
+	// model.addAttribute("testserial", "test6-subtest2");
+	// return "requestMappingAndParamResults2";
+	// }
+
+	// test6, subtest 2: testing @RequestMapping
+	@RequestMapping(value = "/test6", params="empcount")
+	public String requestMappingAndParamTest6Subtest2(@RequestParam String empcount, Model model) {
+		model.addAttribute("orgname", empcount);
+		model.addAttribute("testserial", "test6-subtest2");
+		return "requestMappingAndParamResults2";
 	}
 }
