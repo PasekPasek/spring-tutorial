@@ -19,6 +19,7 @@
 	<c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>
 	<div style="text-align: center;">
 		<a href="${contextPath}/home" style="font-size: 20px">CLick here to go to the test bed for @ModelAttribute</a>
+		<a href="${contextPath}/home2" style="font-size: 20px">Click here to go to the 2nd home test bed</a>
 	</div>
 </body>
 </html>
