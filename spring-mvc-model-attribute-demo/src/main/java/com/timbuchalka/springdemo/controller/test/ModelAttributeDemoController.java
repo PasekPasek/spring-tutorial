@@ -1,11 +1,15 @@
 package com.timbuchalka.springdemo.controller.test;
 
+import javax.management.Attribute;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.timbuchalka.springdemo.domain.Address;
 
 @Controller
 public class ModelAttributeDemoController {
@@ -30,5 +34,20 @@ public class ModelAttributeDemoController {
 	public String modelAttributeTest2(){
 		LOGGER.info("INSIDE modelAttribute2");
 		return "We will conduct a series of test here";
+	}
+	
+	//Test3: Demonstarting the usage  of the @ModelAttribute annotation (on a method) to implicity add an attribute.
+	//by returning it and also demonstrating the usage of the 'value' attribute of the @ModelAttribute annotation (on a method).
+	@ModelAttribute(value="testdata3")
+	public Address modelAttributeTest3(){
+		LOGGER.info("INSIDE modelAttributeTest3");
+		return new Address("Adelaide", "5000");
+	}
+	
+	//test4: Demonstrate the default naming strategy of the @ModelAttribute annottaion (on a method)
+	@ModelAttribute
+	public Address modelAttributeTest4(){
+		LOGGER.info("INSIDE modelAttributeTest4");
+		return new Address("Sydney", "2000");
 	}
 }
