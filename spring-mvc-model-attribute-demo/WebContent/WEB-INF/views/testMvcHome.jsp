@@ -19,7 +19,7 @@
 	<c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>
 	<div style="text-align: center;">
 		<a href="${contextPath}/requestMappingAndParamDemo/home" style="font-size: 20px">CLick here to go to the test bed for @RequestMapping and @RequestParam annotations</a>
-		<a href="${contextPath}/home2" style="font-size: 20px">Click here to go to the test bed for @Model Attribute annotation</a>
+		<a href="${contextPath}/home4" style="font-size: 20px">Click here to go to the test bed for @Model Attribute annotation</a>
 	</div>
 </body>
 </html>

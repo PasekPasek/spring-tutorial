@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.timbuchalka.springdemo.domain.Address;
@@ -35,14 +36,14 @@ public class ModelAttributeDemoController {
 	@RequestMapping(value = "/home3")
 	public ModelAndView home3() {
 		ModelAndView mav = new ModelAndView("modelAttributeHome");
-		mav.addObject("andAddress", new Address());
+		mav.addObject("anAddress", new Address());
 		return mav;
 	}
 
 	// version 4 of home method
 	@RequestMapping(value = "/home4")
 	public ModelAndView home4() {
-		return new ModelAndView("modelAttributeHome", "andAddress", new Address("Melbourne", "3000"));
+		return new ModelAndView("modelAttributeHome", "anAddress", new Address("Melbourne", "3000"));
 	}
 
 	// version 5 of home method
@@ -85,5 +86,13 @@ public class ModelAttributeDemoController {
 	public Address modelAttributeTest4() {
 		LOGGER.info("INSIDE modelAttributeTest4");
 		return new Address("Sydney", "2000");
+	}
+	
+	// test5: tetsing the @ModelAttribute with 'value' attribute and default binding
+	@RequestMapping(value="/test5", method=RequestMethod.POST)
+	public String modelAttributeTest5(@ModelAttribute(value="anAddress") Address anAddress, Model model) {
+		model.addAttribute("testdata5", anAddress.getCity());
+		model.addAttribute("testdata5B", anAddress.getZipCode());
+		return "modelAttributeHome";
 	}
 }
