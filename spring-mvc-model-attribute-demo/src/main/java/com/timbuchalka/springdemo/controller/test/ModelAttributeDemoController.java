@@ -95,4 +95,11 @@ public class ModelAttributeDemoController {
 		model.addAttribute("testdata5B", anAddress.getZipCode());
 		return "modelAttributeTest";
 	}
+	
+	//test 6: test to determine nature of how the @ModelAttribute (on method) and @Requestmapping work with on explixit logical view name
+	@RequestMapping(value="/modelAttributeTest")
+	@ModelAttribute("testdata6")
+	public Address modelAttributeTest6(){
+		return new Address("Canberra", "2600");
+	}
 }

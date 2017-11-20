@@ -57,6 +57,14 @@ h1, h2{
 				
 			</table>
 		</form:form>
+		<form:form action="modelAttributeTest">
+			<h3>test 6: @ModelAttribute with no explicit logical view name</h3>
+			<table>
+				<tr>
+					<td><input type="submit" value="Relocate"></td>
+				</tr>
+			</table>
+		</form:form>
 	</div>
 </body>
 </html>
