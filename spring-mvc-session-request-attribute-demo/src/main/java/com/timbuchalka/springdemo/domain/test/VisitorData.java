@@ -15,10 +15,14 @@ public class VisitorData implements Serializable {
 	private String currentVisitorEmail;
 	private List<Visitor> visitors = new ArrayList<>();
 	
-	public VisitorData(String currentVisitorName, String currrntVisitorEmail, List<Visitor> visitors) {
+	public VisitorData(String currentVisitorName, String currentVisitorEmail, List<Visitor> visitors) {
 		this.currentVisitorName = currentVisitorName;
-		this.currentVisitorEmail = currrntVisitorEmail;
+		this.currentVisitorEmail = currentVisitorEmail;
 		this.visitors = visitors;
+	}
+
+	public VisitorData() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getCurrentVisitorName() {
