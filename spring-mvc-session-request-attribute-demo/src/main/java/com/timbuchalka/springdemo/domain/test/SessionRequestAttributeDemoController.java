@@ -1,4 +1,4 @@
-package com.timbuchalka.springdemo.controller.test;
+package com.timbuchalka.springdemo.domain.test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +17,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.timbuchalka.springdemo.domain.test.Visitor;
-import com.timbuchalka.springdemo.domain.test.VisitorCount;
-import com.timbuchalka.springdemo.domain.test.VisitorData;
-import com.timbuchalka.springdemo.domain.test.VisitorService;
-
 @Controller
 @SessionAttributes(names={"visitordata","visitorcount"})
 @RequestMapping("/visitorRegister")
@@ -33,7 +28,7 @@ public class SessionRequestAttributeDemoController {
 	private static Logger LOGGER = LoggerFactory.getLogger(SessionRequestAttributeDemoController.class);
 	
 	public ModelAndView home(){
-		return new ModelAndView("sessionRequestAttributeHome", "visitorsStats", new VisitorData());
+		return new ModelAndView("test/sessionRequestAttributeViews/sessionRequestAttributeHome", "visitorsStats", new VisitorData());
 	}
 	
 	@ModelAttribute(name="visitordata")
@@ -65,7 +60,7 @@ public class SessionRequestAttributeDemoController {
 			LOGGER.info("This is a GET request");
 		}
 		
-		return "sessionRequestAttributeResult";
+		return "test/sessionRequestAttributeViews/sessionRequestAttributeResult";
 	}
 
 }
