@@ -15,7 +15,7 @@ public class VisitorService {
 	public void registerVisitor(VisitorData sessionData, VisitorData incomingVisitor){
 		List<Visitor> visitors = sessionData.getVisitors();
 		sessionData.setCurrentVisitorName(incomingVisitor.getCurrentVisitorName());
-		sessionData.setCurrrntVisitorEmail(incomingVisitor.getCurrrntVisitorEmail());
-		visitors.add(new Visitor(incomingVisitor.getCurrentVisitorName(), incomingVisitor.getCurrrntVisitorEmail()));
+		sessionData.setCurrentVisitorEmail(incomingVisitor.getCurrentVisitorEmail());
+		visitors.add(new Visitor(incomingVisitor.getCurrentVisitorName(), incomingVisitor.getCurrentVisitorEmail()));
 	}
 }

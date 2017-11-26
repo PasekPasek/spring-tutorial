@@ -25,6 +25,8 @@ public class VisitorData implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	public String getCurrentVisitorName() {
 		return currentVisitorName;
 	}
@@ -33,12 +35,12 @@ public class VisitorData implements Serializable {
 		this.currentVisitorName = currentVisitorName;
 	}
 
-	public String getCurrrntVisitorEmail() {
+	public String getCurrentVisitorEmail() {
 		return currentVisitorEmail;
 	}
 
-	public void setCurrrntVisitorEmail(String currrntVisitorEmail) {
-		this.currentVisitorEmail = currrntVisitorEmail;
+	public void setCurrentVisitorEmail(String currentVisitorEmail) {
+		this.currentVisitorEmail = currentVisitorEmail;
 	}
 
 	public List<Visitor> getVisitors() {
