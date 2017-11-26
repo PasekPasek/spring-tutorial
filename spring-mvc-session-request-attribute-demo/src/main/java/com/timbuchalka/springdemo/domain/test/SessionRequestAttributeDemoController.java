@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttribute;
@@ -55,7 +57,7 @@ public class SessionRequestAttributeDemoController {
 			SessionStatus sessionStatus, 
 			HttpServletRequest request,
 			@SessionAttribute(name="sessionStartTime") LocalDateTime startTime,
-			@SessionAttribute(name="currentTime") LocalDateTime clockTime,
+			@RequestAttribute(name="currentTime") LocalDateTime clockTime,
 			Model model) {
 		VisitorData visitorDataFromSession = (VisitorData) session.getAttribute("visitordata");
 		visitorService.registerVisitor(visitorDataFromSession, currentVisitor);
@@ -66,11 +68,15 @@ public class SessionRequestAttributeDemoController {
 		
 		if (visitorCount.getCount() == 5) {
 			sessionStatus.setComplete();
-			session.invalidate();
+//			session.invalidate();
 		}
 		
-		model.addAttribute("timeheading", visitorService.describeCurrentTime(clockTime));
-		model.addAttribute("durationHeading", visitorService.describeCurrentDuration(currentSessionDuration));
+//		model.addAttribute("timeHeading", visitorService.describeCurrentTime(clockTime));
+//		model.addAttribute("durationHeading", visitorService.describeCurrentDuration(currentSessionDuration));
+		
+		Map<String, Object> modelMap = model.asMap();
+		modelMap.put("timeHeading", visitorService.describeCurrentTime(clockTime));
+		modelMap.put("durationHeading", visitorService.describeCurrentDuration(currentSessionDuration));
 		
 		// debug
 //		LOGGER.info(visitorDataFromSession.toString());
