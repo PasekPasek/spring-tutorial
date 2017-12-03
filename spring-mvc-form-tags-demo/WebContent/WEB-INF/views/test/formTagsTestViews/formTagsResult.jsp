@@ -15,6 +15,14 @@
 	<h2>Details below...</h2>
 	<div style="margin-left: 600px; width: auto">
 		<h3>Organization Name: <b>${orgreg.orgName}</b></h3>
+		<h3>Country: <b>${orgreg.country}</b></h3>
+		<h3>Turnover: 
+			<c:forEach var="entry" items="${turnoverlist}">
+				<c:if test="${orgreg.turnover eq entry.key}">
+					<b>${entry.value}</b>
+				</c:if>
+			</c:forEach>
+		</h3>
 	</div>
 </body>
 </html>
