@@ -21,6 +21,7 @@
 		<a href="${contextPath}/requestMappingAndParamDemo/home" style="font-size: 20px">CLick here to go to the test bed for @RequestMapping and @RequestParam annotations</a><br>
 		<a href="${contextPath}/home4" style="font-size: 20px">Click here to go to the test bed for @Model Attribute annotation</a><br>
 		<a href="${contextPath}/visitorRegister/home" style="font-size: 20px">Click here to go to the test bed for @SessionAttribute annotation</a><br>
+		<a href="${contextPath}/formTagsDemo/home" style="font-size: 20px">Click here to go to the test bed for Form Tags</a><br>
 	</div>
 </body>
 </html>
