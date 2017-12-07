@@ -37,5 +37,6 @@ public class FormTagsController {
 		map.put("turnoverlist", orgRegService.populateTurnover());
 		map.put("typelist", orgRegService.populateTypes());
 		map.put("serviceLengthList", orgRegService.populateServiceLengths());
+		map.put("registeredPreviouslyList", orgRegService.populateRegisteredPreviously());
 	}
 }

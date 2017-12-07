@@ -6,6 +6,24 @@ public class OrganizationRegistration {
 	private String turnover;
 	private String type;
 	private String serviceLength;
+	private boolean registeredPreviously = true;
+	private String like;
+
+	public String getLike() {
+		return like;
+	}
+
+	public void setLike(String like) {
+		this.like = like;
+	}
+
+	public boolean isRegisteredPreviously() {
+		return registeredPreviously;
+	}
+
+	public void setRegisteredPreviously(boolean registeredPreviously) {
+		this.registeredPreviously = registeredPreviously;
+	}
 
 	public String getServiceLength() {
 		return serviceLength;

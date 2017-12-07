@@ -37,6 +37,23 @@
 				</c:if>
 			</c:forEach>
 		</h3>
+		<h3>registered Previously: 
+			<c:forEach var="entry" items="${registeredPreviouslyList}">
+				<c:if test="${orgreg.registeredPreviously eq entry.key}">
+					<b>${entry.value}</b>
+				</c:if>
+			</c:forEach>
+		</h3>
+		<h3>Like our website?
+			<c:choose>
+				<c:when test="${orgreg.like eq 'yes'}">
+					<b>Like</b>
+				</c:when>
+				<c:otherwise>
+					<b>Do not like</b>
+				</c:otherwise>
+			</c:choose>
+		</h3>
 	</div>
 </body>
 </html>

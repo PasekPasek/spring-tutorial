@@ -56,6 +56,16 @@
 				</tr>
 				
 				<tr>
+					<td><form:label path="registeredPreviously">Registered Previously</form:label></td>
+					<td><form:checkbox path="registeredPreviously" items="${registeredPreviouslyList}"/></td>
+				</tr>
+				
+				<tr>
+					<td><form:label path="like">Like our website?</form:label></td>
+					<td><form:checkbox path="like" value="yes"/>Like</td>
+				</tr>
+				
+				<tr>
 					<td />
 					<td align="center"><input type="submit" value="Submit"></td>
 				</tr>
