@@ -23,6 +23,13 @@
 				</c:if>
 			</c:forEach>
 		</h3>
+		<h3>Type: 
+			<c:forEach var="entry" items="${typelist}">
+				<c:if test="${orgreg.type eq entry.key}">
+					<b>${entry.value}</b>
+				</c:if>
+			</c:forEach>
+		</h3>
 	</div>
 </body>
 </html>

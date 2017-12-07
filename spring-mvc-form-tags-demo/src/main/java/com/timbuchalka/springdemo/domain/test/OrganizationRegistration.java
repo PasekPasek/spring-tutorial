@@ -4,6 +4,15 @@ public class OrganizationRegistration {
 	private String orgName;
 	private String country;
 	private String turnover;
+	private String type;
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 
 	public String getTurnover() {
 		return turnover;

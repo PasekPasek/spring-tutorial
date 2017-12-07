@@ -15,4 +15,12 @@ public class OrganizationRegistrationService {
 		turnover.put("100000", "Greater than $10,000 but less than $100,000");
 		return turnover;
 	}
+	
+	public Map<String, String> populateTypes(){
+		Map<String, String> types = new LinkedHashMap<>();
+		types.put("gov", "Government");
+		types.put("semigov", "Semi Government");
+		types.put("private", "Private");
+		return types;
+	}
 }

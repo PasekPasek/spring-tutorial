@@ -41,6 +41,16 @@
 				</tr>
 				
 				<tr>
+					<td><form:label path="type">Type</form:label></td>
+					<td>
+						<form:select path="type">
+							<form:option value="NONE">-----SELECT-----</form:option>
+							<form:options items="${typelist}"/>
+						</form:select>
+					</td>
+				</tr>
+				
+				<tr>
 					<td />
 					<td align="center"><input type="submit" value="Submit"></td>
 				</tr>
