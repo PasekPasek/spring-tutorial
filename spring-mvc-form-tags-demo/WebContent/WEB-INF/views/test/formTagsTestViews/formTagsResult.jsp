@@ -30,6 +30,13 @@
 				</c:if>
 			</c:forEach>
 		</h3>
+		<h3>Organization Age: 
+			<c:forEach var="entry" items="${serviceLengthList}">
+				<c:if test="${orgreg.serviceLength eq entry.key}">
+					<b>${entry.value}</b>
+				</c:if>
+			</c:forEach>
+		</h3>
 	</div>
 </body>
 </html>
