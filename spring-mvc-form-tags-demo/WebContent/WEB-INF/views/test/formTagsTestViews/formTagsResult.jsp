@@ -65,6 +65,17 @@
 			<b>${optservice.substring(0, optservice.length()-2)}</b>
 		</h3>
 		
+		<h3>Premium Services: 
+			<c:forEach var="entry1" items="${premiumServiceList}">
+				<c:forEach var="entry2" items="${orgreg.premiumServices}">
+					<c:if test="${entry2 eq entry1.key}">
+						<c:set var="premiumservice" scope="request" value="${premiumservice}${entry1.value}, "/>
+					</c:if>
+				</c:forEach>
+			</c:forEach>
+			<b>${premiumservice.substring(0, premiumservice.length()-2)}</b>
+		</h3>
+		
 	</div>
 </body>
 </html>

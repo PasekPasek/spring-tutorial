@@ -74,6 +74,11 @@
 					</td>
 				</tr>
 				
+				<tr>
+					<td><form:label path="premiumServices">Premium Services</form:label></td>
+					<td><form:checkboxes path="premiumServices" items="${premiumServiceList}"/></td>
+				</tr>
+				
 				
 				
 				<tr>
