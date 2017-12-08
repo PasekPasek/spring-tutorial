@@ -61,12 +61,20 @@
 				</tr>
 				
 				<tr>
+					<td><form:label path="optionalServices">Optional Services Subscriptions</form:label></td>
+					<td>
+						<form:checkbox path="optionalServices" value="emailService"/>${subscriptionList.emailService}
+						<form:checkbox path="optionalServices" value="promotionalService"/>${subscriptionList.promotionalService}
+						<form:checkbox path="optionalServices" value="newsletterService"/>${subscriptionList.newsletterService}
+					</td>
+				</tr>
+				
+				<tr>
 					<td><form:label path="like">Like our website?</form:label></td>
 					<td><form:checkbox path="like" value="yes"/>Like</td>
 				</tr>
 				
 				<tr>
-					<td />
 					<td align="center"><input type="submit" value="Submit"></td>
 				</tr>
 			</table>
