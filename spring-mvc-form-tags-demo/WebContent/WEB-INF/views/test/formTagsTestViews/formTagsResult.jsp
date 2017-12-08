@@ -37,6 +37,16 @@
 				</c:if>
 			</c:forEach>
 		</h3>
+		<h3>Like our website?
+			<c:choose>
+				<c:when test="${orgreg.like eq 'yes'}">
+					<b>Like</b>
+				</c:when>
+				<c:otherwise>
+					<b>Do not like</b>
+				</c:otherwise>
+			</c:choose>
+		</h3>
 		<h3>Registered Previously: 
 			<c:forEach var="entry" items="${registeredPreviouslyList}">
 				<c:if test="${orgreg.registeredPreviously eq entry.key}">
@@ -48,22 +58,13 @@
 			<c:forEach var="entry1" items="${subscriptionList}">
 				<c:forEach var="entry2" items="${orgreg.optionalServices}">
 					<c:if test="${entry2 eq entry1.key}">
-						<c:set var="optService" scope="request" value="${optService}${entry1.value}, "/>
+						<c:set var="optservice" scope="request" value="${optservice}${entry1.value}, "/>
 					</c:if>
 				</c:forEach>
 			</c:forEach>
 			<b>${optservice.substring(0, optservice.length()-2)}</b>
 		</h3>
-		<h3>Like our website?
-			<c:choose>
-				<c:when test="${orgreg.like eq 'yes'}">
-					<b>Like</b>
-				</c:when>
-				<c:otherwise>
-					<b>Do not like</b>
-				</c:otherwise>
-			</c:choose>
-		</h3>
+		
 	</div>
 </body>
 </html>
