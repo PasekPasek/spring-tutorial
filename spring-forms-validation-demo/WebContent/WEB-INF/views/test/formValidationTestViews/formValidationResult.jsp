@@ -15,7 +15,7 @@
 	<h2 class="ch2">Details are below...</h2>
 	<hr/>
 	<div style="margin-left:600px;width:auto">
-		<h3>Name: <b class="cb">${orgrep.firstName}</b></h3>
+		<h3>Name: <b class="cb">${orgrep.firstName} ${orgrep.lastName}</b></h3>
 	</div>
 	
 	<hr/>
