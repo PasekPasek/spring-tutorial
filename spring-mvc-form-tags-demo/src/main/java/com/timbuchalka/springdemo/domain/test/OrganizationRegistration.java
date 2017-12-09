@@ -10,7 +10,25 @@ public class OrganizationRegistration {
 	private String like;
 	private String[] optionalServices;
 	private String[] premiumServices;
+	private String overseasOperations;
+	private String employeeStrength;
 	
+	public String getEmployeeStrength() {
+		return employeeStrength;
+	}
+
+	public void setEmployeeStrength(String employeeStrength) {
+		this.employeeStrength = employeeStrength;
+	}
+
+	public String getOverseasOperations() {
+		return overseasOperations;
+	}
+
+	public void setOverseasOperations(String overseasOperations) {
+		this.overseasOperations = overseasOperations;
+	}
+
 	public String[] getPremiumServices() {
 		return premiumServices;
 	}
