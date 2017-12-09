@@ -30,6 +30,11 @@
 					<td><form:errors path="lastName" cssClass="cb"></form:errors></td>
 				</tr>
 				<tr>
+					<td><form:label path="age" cssClass="clabel">Age</form:label></td>
+					<td><form:input path="age" placeholder="Enter age" cssClass="cinput"></form:input></td>
+					<td><form:errors path="age" cssClass="cb"></form:errors></td>
+				</tr>
+				<tr>
 					<td/>
 					<td align="center"><input type="submit" value="Submit" class="csubmit"></td>
 				</tr>
