@@ -40,6 +40,11 @@
 					<td><form:errors path="zipCode" cssClass="cb"></form:errors></td>
 				</tr>
 				<tr>
+					<td><form:label path="email" cssClass="clabel">Email</form:label></td>
+					<td><form:input path="email" placeholder="Enter email" cssClass="cinput"></form:input></td>
+					<td><form:errors path="email" cssClass="cb"></form:errors></td>
+				</tr>
+				<tr>
 					<td/>
 					<td align="center"><input type="submit" value="Submit" class="csubmit"></td>
 				</tr>
