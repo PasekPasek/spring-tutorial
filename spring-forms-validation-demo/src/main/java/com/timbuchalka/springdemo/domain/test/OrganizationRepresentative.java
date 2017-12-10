@@ -1,5 +1,6 @@
 package com.timbuchalka.springdemo.domain.test;
 
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -16,8 +17,20 @@ public class OrganizationRepresentative {
 	@Size(min=3, max=10, message="* Surname: min 3 chars required, max 10 chars allowed")
 	private String lastName;
 	
-	@AgeConstraint
+	@AgeConstraint(lower=20, upper=70, message="* Age range 20 to 70 only")
 	private Integer age;
+	
+	@NotBlank(message="* Zipcode: cannot be empty")
+	@Pattern(regexp="^[a-zA-Z0-9]{6}", message="* ZipCode: 6 characters and/or digits only")
+	private String zipCode;
+	
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
 
 	public Integer getAge() {
 		return age;

@@ -35,6 +35,11 @@
 					<td><form:errors path="age" cssClass="cb"></form:errors></td>
 				</tr>
 				<tr>
+					<td><form:label path="zipCode" cssClass="clabel">Zip code</form:label></td>
+					<td><form:input path="zipCode" placeholder="Enter zip code" cssClass="cinput"></form:input></td>
+					<td><form:errors path="zipCode" cssClass="cb"></form:errors></td>
+				</tr>
+				<tr>
 					<td/>
 					<td align="center"><input type="submit" value="Submit" class="csubmit"></td>
 				</tr>
