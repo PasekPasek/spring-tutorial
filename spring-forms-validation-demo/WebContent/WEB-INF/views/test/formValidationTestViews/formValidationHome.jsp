@@ -42,7 +42,40 @@
 				<tr>
 					<td><form:label path="email" cssClass="clabel">Email</form:label></td>
 					<td><form:input path="email" placeholder="Enter email" cssClass="cinput"></form:input></td>
-					<td><form:errors path="email" cssClass="cb"></form:errors></td>
+					<td>
+						<form:errors path="email" cssClass="cb"></form:errors>
+						<spring:hasBindErrors name="orgrep">
+							<c:forEach items="${errors.globalErrors}" var="globalError">
+								<c:if test="${fn:contains(globalError,'Email')}">
+									<c:out value="${globalError.defaultMessage}"></c:out>
+								</c:if>
+							</c:forEach>
+						</spring:hasBindErrors>
+					</td>
+				</tr>
+				<tr>
+					<td><form:label path="verifyEmail" cssClass="clabel">Verify Email</form:label></td>
+					<td><form:input path="verifyEmail" placeholder="Verify Email" cssClass="cinput"></form:input></td>
+					<td><form:errors path="verifyEmail" cssClass="cb"></form:errors></td>
+				</tr>
+				<tr>
+					<td><form:label path="password" cssClass="clabel">Password</form:label></td>
+					<td><form:password path="password" placeholder="Enter password" cssClass="cinput"></form:password></td>
+					<td>
+						<form:errors path="password" cssClass="cb"></form:errors>
+						<spring:hasBindErrors name="orgrep">
+							<c:forEach items="${errors.globalErrors}" var="globalError">
+								<c:if test="${fn:contains(globalError,'Password')}">
+									<c:out value="${globalError.defaultMessage}"></c:out>
+								</c:if>
+							</c:forEach>
+						</spring:hasBindErrors>
+					</td>
+				</tr>
+				<tr>
+					<td><form:label path="verifyPassword" cssClass="clabel">Verify Password</form:label></td>
+					<td><form:password path="verifyPassword" placeholder="Verify Password" cssClass="cinput"></form:password></td>
+					<td><form:errors path="verifyPassword" cssClass="cb"></form:errors></td>
 				</tr>
 				<tr>
 					<td/>
